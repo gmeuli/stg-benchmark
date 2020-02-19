@@ -1,19 +1,19 @@
-# Quantum circuits implementing Boolean functions
-The benchmark contains quantum circuits expressed in the Q# quantum programming language. 
-The circuits are optimized implementations of all the representatives of spectral-equivalent classes of Boolean functions with 4 and 5 inputs. 
-For each representative, the benchmark contains three different implementations: optimized for T-count, T-depth or number of qubits. 
+# The Single-Target Gate (STG) benchmark suite
+The benchmark suite contains quantum circuits implementing small Boolean functions and expressed in the Q# quantum programming language. 
 
+The circuits are optimized according to the requirements of fault-tolerant quantum computing. 
+For each representative of a spectral-equivalent class of Boolean functions with 4 and 5 inputs, the benchmark contains three different implementations: optimized for T-count, T-depth or number of qubits. 
 
-Details on the algorithms that have been used to generate the circuits are in [1], together with an explanation of how the representative implementation can be used to generate a circuit for all Boolean functions in the same 
-spectral-equivalent class.
+Details on the algorithms applied to generate the original circuits are in [1], together with an explanation of how the representative implementation can be used to generate a circuit for all Boolean functions in the same 
+spectral-equivalent class, without increasing any of the indicated cost functions.
 
-The benchmark can be used in association with the LUT-based compilation method in [2] to generate quantum circuits implementing larger Boolean functions.
+The benchmarks can be used in association with the LUT-based compilation method in [2] to generate quantum circuits implementing larger Boolean functions.
 
 [1] G. Meuli, M. Soeken, M. Roetteler, G. De Micheli, *Enumerating Optimal Quantum Circuits using Spectral Classification*, ISCAS 2020.
 
 [2] G. Meuli, M. Soeken, M. Roetteler, G. De Micheli, *ROS: Resource Constrained Oracle Synthesis for Quantum Computers*,QPL 2019
 
-Best-known compilation results
+Compilation results
 -----
 
 <font size="1.5">
