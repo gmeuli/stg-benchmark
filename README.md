@@ -11,7 +11,7 @@ The benchmarks can be used in association with the LUT-based compilation method 
 
 [1] G. Meuli, M. Soeken, M. Roetteler, G. De Micheli, *Enumerating Optimal Quantum Circuits using Spectral Classification*, ISCAS 2020.
 
-[2] G. Meuli, M. Soeken, M. Roetteler, G. De Micheli, *ROS: Resource Constrained Oracle Synthesis for Quantum Computers*,QPL 2019
+[2] G. Meuli, M. Soeken, M. Roetteler, G. De Micheli, *ROS: Resource Constrained Oracle Synthesis for Quantum Computers*, QPL 2019
 
 Compilation results
 -----
