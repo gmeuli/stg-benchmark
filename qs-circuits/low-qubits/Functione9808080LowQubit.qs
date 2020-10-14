@@ -4,14 +4,124 @@ namespace AffineCosts
 	open Microsoft.Quantum.Intrinsic;
 	open Microsoft.Quantum.Arrays;
 
-	operation Functione9808080LowQubit(controls : Qubit[], target : Qubit): Unit 
+	operation Functione9808080LowQubit(): Unit
 	{
-			    Controlled XWrap ([ controls[0], controls[1], controls[2] ], target);
-	    Controlled XWrap ([ controls[0], controls[3], controls[4] ], target);
-	    Controlled XWrap ([ controls[1], controls[3], controls[4] ], target);
-	    Controlled XWrap ([ controls[2], controls[3], controls[4] ], target);
-	    CCNOT(controls[3], controls[4], target);
-	
+		using (qs = Qubit[6])
+		{
+			H (qs[2]);
+			CNOT  (qs[3],  qs[2]);
+			CNOT  (qs[4],  qs[2]);
+			CNOT  (qs[4],  qs[3]);
+			CNOT  (qs[3],  qs[4]);
+			CNOT  (qs[2],  qs[4]);
+			CNOT  (qs[2],  qs[3]);
+			T (qs[3]);
+			Adjoint T (qs[4]);
+			T (qs[2]);
+			CNOT  (qs[4],  qs[3]);
+			CNOT  (qs[2],  qs[3]);
+			CNOT  (qs[2],  qs[4]);
+			CNOT  (qs[3],  qs[4]);
+			CNOT  (qs[3],  qs[2]);
+			Adjoint T (qs[3]);
+			CNOT  (qs[3],  qs[4]);
+			H (qs[3]);
+			H (qs[0]);
+			CNOT  (qs[3],  qs[0]);
+			CNOT  (qs[5],  qs[3]);
+			CNOT  (qs[3],  qs[5]);
+			Adjoint T (qs[0]);
+			Adjoint T (qs[3]);
+			T (qs[5]);
+			CNOT  (qs[3],  qs[0]);
+			CNOT  (qs[5],  qs[0]);
+			CNOT  (qs[0],  qs[3]);
+			T (qs[0]);
+			T (qs[3]);
+			CNOT  (qs[3],  qs[0]);
+			CNOT  (qs[5],  qs[0]);
+			H (qs[5]);
+			CNOT  (qs[4],  qs[2]);
+			CNOT  (qs[5],  qs[2]);
+			CNOT  (qs[2],  qs[4]);
+			T (qs[5]);
+			Adjoint T (qs[4]);
+			T (qs[2]);
+			CNOT  (qs[4],  qs[5]);
+			CNOT  (qs[2],  qs[5]);
+			CNOT  (qs[2],  qs[4]);
+			CNOT  (qs[5],  qs[4]);
+			CNOT  (qs[5],  qs[2]);
+			Adjoint T (qs[5]);
+			CNOT  (qs[4],  qs[5]);
+			CNOT  (qs[5],  qs[4]);
+			H (qs[4]);
+			CNOT  (qs[4],  qs[0]);
+			CNOT  (qs[0],  qs[3]);
+			T (qs[0]);
+			Adjoint T (qs[3]);
+			CNOT  (qs[4],  qs[0]);
+			CNOT  (qs[4],  qs[3]);
+			CNOT  (qs[0],  qs[3]);
+			H (qs[2]);
+			CNOT  (qs[2],  qs[0]);
+			CNOT  (qs[1],  qs[2]);
+			CNOT  (qs[0],  qs[1]);
+			Adjoint T (qs[0]);
+			T (qs[1]);
+			Adjoint T (qs[2]);
+			CNOT  (qs[1],  qs[0]);
+			CNOT  (qs[2],  qs[0]);
+			CNOT  (qs[2],  qs[1]);
+			CNOT  (qs[0],  qs[2]);
+			T (qs[0]);
+			CNOT  (qs[1],  qs[2]);
+			CNOT  (qs[2],  qs[1]);
+			Adjoint S (qs[2]);
+			S (qs[1]);
+			CNOT  (qs[1],  qs[2]);
+			S (qs[2]);
+			H (qs[0]);
+			CNOT  (qs[3],  qs[0]);
+			CNOT  (qs[4],  qs[3]);
+			CNOT  (qs[0],  qs[3]);
+			CNOT  (qs[0],  qs[4]);
+			Adjoint T (qs[0]);
+			T (qs[4]);
+			Adjoint T (qs[3]);
+			CNOT  (qs[4],  qs[0]);
+			CNOT  (qs[3],  qs[0]);
+			CNOT  (qs[3],  qs[4]);
+			CNOT  (qs[0],  qs[3]);
+			T (qs[0]);
+			H (qs[4]);
+			H (qs[0]);
+			CNOT  (qs[2],  qs[0]);
+			CNOT  (qs[1],  qs[2]);
+			CNOT  (qs[0],  qs[2]);
+			CNOT  (qs[0],  qs[1]);
+			Adjoint T (qs[0]);
+			T (qs[1]);
+			Adjoint T (qs[2]);
+			CNOT  (qs[1],  qs[0]);
+			CNOT  (qs[2],  qs[0]);
+			CNOT  (qs[2],  qs[1]);
+			CNOT  (qs[0],  qs[2]);
+			T (qs[0]);
+			H (qs[0]);
+			CNOT  (qs[0],  qs[4]);
+			CNOT  (qs[4],  qs[0]);
+			CNOT  (qs[0],  qs[4]);
+			CNOT  (qs[2],  qs[3]);
+			CNOT  (qs[3],  qs[2]);
+			CNOT  (qs[2],  qs[3]);
+			CNOT  (qs[3],  qs[5]);
+			CNOT  (qs[5],  qs[3]);
+			CNOT  (qs[3],  qs[5]);
+			CNOT  (qs[5],  qs[1]);
+			CNOT  (qs[1],  qs[5]);
+			CNOT  (qs[5],  qs[1]);
+
 		}
-	 
+	}
 }

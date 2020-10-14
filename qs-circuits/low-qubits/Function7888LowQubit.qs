@@ -4,11 +4,52 @@ namespace AffineCosts
 	open Microsoft.Quantum.Intrinsic;
 	open Microsoft.Quantum.Arrays;
 
-	operation Function7888LowQubit(controls : Qubit[], target : Qubit): Unit 
+	operation Function7888LowQubit(): Unit
 	{
-			    CCNOT(controls[0], controls[1], target);
-	    CCNOT(controls[2], controls[3], target);
-	
+		using (qs = Qubit[5])
+		{
+			H (qs[0]);
+			CNOT  (qs[2],  qs[1]);
+			CNOT  (qs[3],  qs[0]);
+			CNOT  (qs[3],  qs[4]);
+			Adjoint T (qs[4]);
+			T (qs[3]);
+			Adjoint T (qs[1]);
+			T (qs[2]);
+			Adjoint T (qs[0]);
+			CNOT  (qs[3],  qs[4]);
+			CNOT  (qs[2],  qs[1]);
+			CNOT  (qs[0],  qs[4]);
+			CNOT  (qs[0],  qs[2]);
+			CNOT  (qs[3],  qs[2]);
+			CNOT  (qs[4],  qs[0]);
+			CNOT  (qs[4],  qs[3]);
+			T (qs[4]);
+			Adjoint T (qs[3]);
+			T (qs[0]);
+			Adjoint T (qs[2]);
+			T (qs[1]);
+			CNOT  (qs[3],  qs[4]);
+			CNOT  (qs[0],  qs[3]);
+			CNOT  (qs[1],  qs[3]);
+			CNOT  (qs[1],  qs[2]);
+			CNOT  (qs[3],  qs[1]);
+			T (qs[2]);
+			Adjoint T (qs[3]);
+			CNOT  (qs[3],  qs[2]);
+			CNOT  (qs[1],  qs[3]);
+			S (qs[1]);
+			H (qs[1]);
+			CNOT  (qs[0],  qs[1]);
+			CNOT  (qs[1],  qs[0]);
+			CNOT  (qs[0],  qs[1]);
+			CNOT  (qs[3],  qs[4]);
+			CNOT  (qs[4],  qs[3]);
+			CNOT  (qs[3],  qs[4]);
+			CNOT  (qs[4],  qs[1]);
+			CNOT  (qs[1],  qs[4]);
+			CNOT  (qs[4],  qs[1]);
+
 		}
-	
+	}
 }
